@@ -46,7 +46,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 /**
  * Test class for SAX2.
  */
-public class SAXTest implements ContentHandler, ErrorHandler
+public class SAXTestSkip implements ContentHandler, ErrorHandler
 {
 
     ////////////////////////////////////////////////////////////////////
@@ -121,7 +121,7 @@ public class SAXTest implements ContentHandler, ErrorHandler
 	// Assign handlers.
 	//
 	System.out.println("Creating and assigning handlers\n");
-	SAXTest handler = new SAXTest();
+	SAXTestSkip handler = new SAXTestSkip ();
 	reader.setContentHandler(handler);
 	reader.setErrorHandler(handler);
 

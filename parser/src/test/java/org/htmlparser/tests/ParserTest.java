@@ -233,7 +233,7 @@ public class ParserTest extends ParserTestCase
     try
     {
       parser = new Parser("http://www.oracle.co.jp/", Parser.DEVNULL);
-      assertTrue("Character set should be Shift_JIS", parser.getEncoding ().equalsIgnoreCase ("Shift_JIS"));
+      assertTrue("Character set should be UTF-8", parser.getEncoding ().equalsIgnoreCase ("UTF-8"));
     }
     catch (ParserException e)
     {
@@ -261,7 +261,7 @@ public class ParserTest extends ParserTestCase
       while (enumeration.hasMoreNodes ())
         if (enumeration.nextNode () instanceof BodyTag)
           break;
-      assertTrue("Character set should be Shift_JIS", parser.getEncoding ().equalsIgnoreCase ("Shift_JIS"));
+      assertTrue("Character set should be ISO-8859-1", parser.getEncoding ().equalsIgnoreCase ("ISO-8859-1"));
     }
     catch (ParserException e)
     {

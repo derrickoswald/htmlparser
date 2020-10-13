@@ -34,7 +34,8 @@ import org.htmlparser.tags.FormTag;
 import org.htmlparser.util.NodeIterator;
 import org.htmlparser.util.SimpleNodeIterator;
 
-public class InstanceofPerformanceTest {
+public class InstanceofPerformanceTestSkip
+{
 
     public static final String FORM_HTML =
     "<FORM METHOD=\""+FormTag.POST+"\" ACTION=\"do_login.php\" NAME=\"login_form\" onSubmit=\"return CheckData()\">\n"+
@@ -113,8 +114,8 @@ public class InstanceofPerformanceTest {
         }
     }
     public static void main(String [] args) throws Exception {
-        InstanceofPerformanceTest test =
-            new InstanceofPerformanceTest();
+        InstanceofPerformanceTestSkip test =
+            new InstanceofPerformanceTestSkip ();
         test.setUp();
         test.perform();
     }
